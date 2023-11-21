@@ -18,7 +18,7 @@ const Biography = ({ biography,work,appearance,connections }) => (
         <li>Haircolor: {appearance.haircolor}</li>
     </ul>
 
-    <h5>Conections</h5>
+    <h5>Connections</h5>
     <ul>
         <li>Relatives: {connections.relatives}</li>
     </ul>

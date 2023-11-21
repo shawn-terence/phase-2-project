@@ -1,6 +1,8 @@
 import React from "react";
 
-function Search(){
-
+function Search({setSearchTerm}){
+ const handlesearch=(e)=>{
+    
+ }
 }
 export default Search;

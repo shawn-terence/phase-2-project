@@ -17,7 +17,7 @@ export default function Biography( ) {
           async() =>{
                try {
                 
-                 const response=await fetch(`https://www.superheroapi.com/api.php/122102502218121324/search/${id}.json`)
+                 const response=await fetch(`https://www.superheroapi.com/api.php/122102502218121324/search/${id}`)
                  const data=await response.json()
                   console.log(data.biography)
                

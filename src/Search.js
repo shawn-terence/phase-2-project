@@ -7,7 +7,8 @@ function Search({setSearchTerm}){
 
   return(
     <form>
-        
+        <input type="text" name="searchTerm" placeholder="Search superhero...">
+        </input>
     </form>
   )
 }

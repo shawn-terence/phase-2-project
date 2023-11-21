@@ -9,7 +9,9 @@ function Search({setSearchTerm}){
     <form>
         <input type="text" name="searchTerm" placeholder="Search superhero...">
         </input>
+        <button></button>
     </form>
+   
   )
 }
 export default Search;

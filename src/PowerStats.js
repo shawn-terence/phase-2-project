@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PowerStats() {
+const PowerStats = ({powerstats}) => {
   return (
     <div id='PowerStats'>
         <h2>PowerStats</h2>

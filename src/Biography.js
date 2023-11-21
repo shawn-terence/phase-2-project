@@ -1,4 +1,5 @@
 import React from "react";
+export function Biography(){
 const Biography = ({ biography,work,appearance,connections }) => (
     <div>
       <h2>Biography</h2>
@@ -24,3 +25,4 @@ const Biography = ({ biography,work,appearance,connections }) => (
 
 </div>
   );
+}

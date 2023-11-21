@@ -4,12 +4,14 @@ function PowerStats() {
   return (
     <div id='PowerStats'>
         <h2>PowerStats</h2>
-            <ul>{intelligence}</ul>
-            <ul>{strength}</ul>
-            <ul>{speed}</ul>
-            <ul>{durability}</ul>
-            <ul>{power}</ul>
-            <ul>{combat}</ul>
+            <ul>
+            <li>{intelligence}</li>
+            <li>{strength}</li>
+            <li>{speed}</li>
+            <li>{durability}</li>
+            <li>{power}</li>
+            <li>{combat}</li>
+            </ul>
     </div>
   )
 }

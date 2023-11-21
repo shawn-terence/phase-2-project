@@ -6,10 +6,10 @@ function Search({setSearchTerm}){
  };
 
   return(
-    <form>
+    <form onSubmit={handlesearch}>
         <input type="text" name="searchTerm" placeholder="Search superhero...">
         </input>
-        <button></button>
+        <button>Search</button>
     </form>
    
   )

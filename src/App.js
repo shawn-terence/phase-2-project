@@ -42,7 +42,11 @@ function App() {
     <div>
        <Navbar /> 
        <Routes>
-        
+          <Search
+                    setSearchTerm={setSearchTerm}
+                    superheroData={superheroData}
+                    addToFavorites={addToFavorites}
+            />
        </Routes>
       <Search setSearchTerm={setSearchTerm} />
 

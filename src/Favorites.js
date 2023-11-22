@@ -9,7 +9,9 @@ const Favorites = ({ favorites }) => {
             <h2>Favorites</h2>
             <Link to="/">Home</Link> 
             {favorites && favorites.length > 0 ? (
-        favorites.map((result) =>
+        favorites.map((result) =>(
+            <div key={result.id}><div/>
+        )
         </div>
 
     )

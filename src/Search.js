@@ -9,7 +9,7 @@ function Search({setSearchTerm}){
 
   return(
     <form onSubmit={handlesearch}>
-        <input type="text" name="searchTerm" placeholder="Sea">
+        <input type="text" name="searchTerm" placeholder="Search a superhero">
         </input>
         <button>Search</button>
     </form>

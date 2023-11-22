@@ -38,7 +38,9 @@ function App() {
   }, [searchTerm]);
 
   return (
+
     <div>
+       <Navbar /> 
       <Search setSearchTerm={setSearchTerm} />
 
       {superheroData && superheroData.length > 0 ? (

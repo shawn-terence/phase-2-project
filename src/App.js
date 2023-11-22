@@ -41,6 +41,9 @@ function App() {
 
     <div>
        <Navbar /> 
+       <Routes>
+        
+       </Routes>
       <Search setSearchTerm={setSearchTerm} />
 
       {superheroData && superheroData.length > 0 ? (

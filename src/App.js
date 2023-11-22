@@ -36,6 +36,9 @@ function App() {
       fetchData();
     }
   }, [searchTerm]);
+  const addToFavorites = (hero) => {
+    setFavorites((prevFavorites) => [...prevFavorites, hero]);
+  };
 
   return (
 

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Search from './Search';
+import { Route, Routes, Link } from 'react-router-dom';
 import PowerStats from './PowerStats';
 import Biography from './Biography';
 import Image from './Image';

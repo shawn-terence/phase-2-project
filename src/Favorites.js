@@ -12,6 +12,7 @@ const Favorites = ({ favorites }) => {
         favorites.map((result) =>(
             <div key={result.id}>
                 <PowerStats powerstats={result.powerstats} Name={result.name} />
+                <Biography biography={result.biography} work={result.work} />
                 <div/>
         )
         </div>

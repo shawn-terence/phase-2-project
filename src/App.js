@@ -40,37 +40,48 @@ function App() {
   return (
 
     <div>
-       <Navbar /> 
-       <Routes>
-          <Search
-                    setSearchTerm={setSearchTerm}
-                    superheroData={superheroData}
-                    addToFavorites={addToFavorites}
+    <Navbar /> 
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div>
+            <Search
+              setSearchTerm={setSearchTerm}
+              superheroData={superheroData}
+              addToFavorites={addToFavorites}
             />
-                   <Route
-          path="/favorites"
-          element={<Favorites favorites={favorites} />}
-        />
-                <Route
-          path="/details/:id"
-          element={<HeroDetails />}
-        />
-       </Routes>
-      <Search setSearchTerm={setSearchTerm} />
-
-      {superheroData && superheroData.length > 0 ? (
-        superheroData.map(result => (
-          <div key={result.id}>
-            <Image imageUrl={result.image.url} Name={result.name}/>
-            <PowerStats powerstats={result.powerstats} />
-            <Biography biography={result.biography} work={result.work} placeofBirth={result.placeofBirth}/>
-           
+            {superheroData && superheroData.length > 0 ? (
+              superheroData.map((result) => (
+                <div key={result.id}>
+                  <PowerStats powerstats={result.powerstats} Name={result.name} />
+                  <Biography biography={result.biography} work={result.work} />
+                  <Image imageUrl={result.image.url} />
+                  <Link to={`/details/${result.id}`}>View Details</Link>
+                  <button onClick={() => addToFavorites(result)}>Add to Favorites</button>
+                </div>
+              ))
+            ) : (
+              <p>No results found</p>
+            )}
           </div>
-        ))
-      ) : (
-        <p>No results found</p>
-      )}
-    </div>
+        }
+      />
+      <Route
+        path="/favorites"
+        element={<Favorites favorites={favorites} />}
+      />
+      <Route
+        path="/details/:id"
+        element={<HeroDetails />}
+      />
+     <Route
+        path="/details/:id"
+        element={<HeroDetails />} 
+      />
+
+    </Routes>
+  </div>
   );
 }
 

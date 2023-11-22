@@ -29,7 +29,6 @@ const HeroDetails = () => {
 
     return (
         <div>
-          <Link to="/">Go back to Home</Link>
           <h2>{heroDetails.name} Details</h2>
           <h3>Powerstats</h3>
           <p>Intelligence: {heroDetails.powerstats.intelligence}</p>
@@ -38,3 +37,14 @@ const HeroDetails = () => {
           <p>Durability: {heroDetails.powerstats.durability}</p>
           <p>Power: {heroDetails.powerstats.power}</p>
           <p>Combat: {heroDetails.powerstats.combat}</p>
+
+          <h3>Biography</h3>
+  <p>Full Name: {heroDetails.biography['full-name']}</p>
+  <p>Alter Egos: {heroDetails.biography['alter-egos']}</p>
+  <p>Aliases: {heroDetails.biography.aliases.join(', ')}</p>
+  <p>Place of Birth: {heroDetails.biography['place-of-birth']}</p>
+  <p>First Appearance: {heroDetails.biography['first-appearance']}</p>
+  <p>Publisher: {heroDetails.biography['publisher']}</p>
+  <p>Alignment: {heroDetails.biography['alignment']}</p>
+    
+    

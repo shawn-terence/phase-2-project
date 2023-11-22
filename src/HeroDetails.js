@@ -58,3 +58,7 @@ const HeroDetails = () => {
   <h3>Work</h3>
   <p>Occupation: {heroDetails.work.occupation}</p>
   <p>Base: {heroDetails.work.base}</p>
+
+  <h3>Connections</h3>
+  <p>Group Affiliation: {heroDetails.connections['group-affiliation']}</p>
+  <p>Relatives: {heroDetails.connections.relatives}</p>

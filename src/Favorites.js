@@ -1,6 +1,6 @@
 import React from 'react';
 import PowerStats from './PowerStats';
-import Biography from './Biography';
+import {Biography} from './Biography';
 import Image from './Image';
 import { Link } from 'react-router-dom';
 

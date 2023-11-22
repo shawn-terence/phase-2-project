@@ -5,6 +5,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import PowerStats from './PowerStats';
 import Biography from './Biography';
 import Image from './Image';
+import Navbar from './Navbar'; 
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');

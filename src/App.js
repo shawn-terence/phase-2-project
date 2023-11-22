@@ -51,6 +51,10 @@ function App() {
           path="/favorites"
           element={<Favorites favorites={favorites} />}
         />
+                <Route
+          path="/details/:id"
+          element={<HeroDetails />}
+        />
        </Routes>
       <Search setSearchTerm={setSearchTerm} />
 

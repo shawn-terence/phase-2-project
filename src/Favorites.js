@@ -10,7 +10,9 @@ const Favorites = ({ favorites }) => {
             <Link to="/">Home</Link> 
             {favorites && favorites.length > 0 ? (
         favorites.map((result) =>(
-            <div key={result.id}><div/>
+            <div key={result.id}>
+                <PowerStats powerstats={result.powerstats} Name={result.name} />
+                <div/>
         )
         </div>
 

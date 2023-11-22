@@ -6,11 +6,13 @@ import PowerStats from './PowerStats';
 import Biography from './Biography';
 import Image from './Image';
 import Navbar from './Navbar'; 
+import HeroDetails from './HeroDetails'; 
+import Favorites from './Favorites';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [superheroData, setSuperheroData] = useState(null);
-
+  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
     function fetchData() {
       const apiUrl = `https://www.superheroapi.com/api.php/122102502218121324/search/${searchTerm}`;

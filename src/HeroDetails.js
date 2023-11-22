@@ -8,7 +8,8 @@ const HeroDetails = () => {
     useEffect(() => {
         const fetchHeroDetails = async () => {
             try {
-                const response = await fetch(`https: //www.superheroapi.com/api.php/122102502218121324/${id}`);
+                const response = await fetch(`https://www.superheroapi.com/api.php/122102502218121324/${id}`);
+
                 if (!response.ok) {
                     throw new Error(`Error fetching hero details. Status: ${ response.status }`);
                 }

@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import Search from './Search';
 import { Route, Routes, Link } from 'react-router-dom';
+import Search from './Search';
 import PowerStats from './PowerStats';
 import { Biography } from './Biography';
 import Image from './Image';
 import Navbar from './Navbar'; 
 import HeroDetails from './HeroDetails'; 
 import Favorites from './Favorites';
+
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -77,10 +78,6 @@ function App() {
       <Route
         path="/details/:id"
         element={<HeroDetails />}
-      />
-     <Route
-        path="/details/:id"
-        element={<HeroDetails />} 
       />
 
     </Routes>

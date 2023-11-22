@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 const Favorites = ({ favorites }) => {
   return (
     <div>
-      <h2>Favorites</h2>
-      <Link to="/">Home</Link> 
+      <h2>Favorites</h2> 
       {favorites && favorites.length > 0 ? (
         favorites.map((result) => (
           <div key={result.id}>

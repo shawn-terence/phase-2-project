@@ -20,3 +20,9 @@ const HeroDetails = () => {
           }
         };
         
+        fetchHeroDetails();
+    }, [id]);
+  
+    if (!heroDetails) {
+      return <p>Loading...</p>;
+    }

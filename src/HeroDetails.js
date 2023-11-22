@@ -47,4 +47,10 @@ const HeroDetails = () => {
   <p>Publisher: {heroDetails.biography['publisher']}</p>
   <p>Alignment: {heroDetails.biography['alignment']}</p>
     
-    
+  <h3>Appearance</h3>
+  <p>Gender: {heroDetails.appearance.gender}</p>
+  <p>Race: {heroDetails.appearance.race}</p>
+  <p>Height: {heroDetails.appearance.height.join(', ')}</p>
+  <p>Weight: {heroDetails.appearance.weight.join(', ')}</p>
+  <p>Eye Color: {heroDetails.appearance['eye-color']}</p>
+  <p>Hair Color: {heroDetails.appearance['hair-color']}</p>

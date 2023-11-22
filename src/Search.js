@@ -1,19 +1,22 @@
-import React from "react";
+import React from 'react';
 
-function Search({setSearchTerm}){
- const handlesearch=(e)=>{
-    e.preventDefault()
-    const searchTerm=e.target.searchTerm.value;
-    setSearchTerm(searchTerm)
- };
 
-  return(
-    <form onSubmit={handlesearch}>
-        <input type="text" name="searchTerm" placeholder="Search a superhero">
-        </input>
-        <button>Search</button>
-    </form>
-   
-  )
-}
+const Search = ({ setSearchTerm, superheroData, addToFavorites }) => {
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const searchTerm = e.target.searchTerm.value;
+    setSearchTerm(searchTerm);
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSearch}>
+        <input type="text" name="searchTerm" placeholder="Search superhero..." />
+        <button type="submit">Search</button>
+      </form>
+
+    </div>
+  );
+};
+
 export default Search;

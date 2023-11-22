@@ -5,15 +5,8 @@ const Navbar = () => {
   return (
     <nav>
         <ul>
-            <li>
-
-            </li>
-            <li>
-                
-            </li>
-
-
-
+            <li><Link></Link></li>
+            <li><Link></Link></li>
         </ul>
     </nav>
   );

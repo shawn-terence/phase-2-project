@@ -26,3 +26,15 @@ const HeroDetails = () => {
     if (!heroDetails) {
       return <p>Loading...</p>;
     }
+
+    return (
+        <div>
+          <Link to="/">Go back to Home</Link>
+          <h2>{heroDetails.name} Details</h2>
+          <h3>Powerstats</h3>
+          <p>Intelligence: {heroDetails.powerstats.intelligence}</p>
+          <p>Strength: {heroDetails.powerstats.strength}</p>
+          <p>Speed: {heroDetails.powerstats.speed}</p>
+          <p>Durability: {heroDetails.powerstats.durability}</p>
+          <p>Power: {heroDetails.powerstats.power}</p>
+          <p>Combat: {heroDetails.powerstats.combat}</p>

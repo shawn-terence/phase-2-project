@@ -5,12 +5,18 @@ const Navbar = () => {
   return (
     <nav>
         <ul>
+            <li>
+
+            </li>
+            <li>
+                
+            </li>
 
 
 
         </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -13,4 +13,10 @@ const HeroDetails = () => {
               throw new Error(Error fetching hero details. Status: ${response.status});
             }
 
-
+            const data = await response.json();
+            setHeroDetails(data);
+          } catch (error) {
+            console.error(error);
+          }
+        };
+        

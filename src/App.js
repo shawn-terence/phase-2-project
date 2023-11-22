@@ -47,6 +47,10 @@ function App() {
                     superheroData={superheroData}
                     addToFavorites={addToFavorites}
             />
+                   <Route
+          path="/favorites"
+          element={<Favorites favorites={favorites} />}
+        />
        </Routes>
       <Search setSearchTerm={setSearchTerm} />
 

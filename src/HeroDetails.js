@@ -62,3 +62,7 @@ const HeroDetails = () => {
   <h3>Connections</h3>
   <p>Group Affiliation: {heroDetails.connections['group-affiliation']}</p>
   <p>Relatives: {heroDetails.connections.relatives}</p>
+
+  <h3>Image</h3>
+  <img src={heroDetails.image.url} alt={heroDetails.name} />
+</div>

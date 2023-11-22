@@ -54,3 +54,7 @@ const HeroDetails = () => {
   <p>Weight: {heroDetails.appearance.weight.join(', ')}</p>
   <p>Eye Color: {heroDetails.appearance['eye-color']}</p>
   <p>Hair Color: {heroDetails.appearance['hair-color']}</p>
+
+  <h3>Work</h3>
+  <p>Occupation: {heroDetails.work.occupation}</p>
+  <p>Base: {heroDetails.work.base}</p>

@@ -14,6 +14,7 @@ const Favorites = ({ favorites }) => {
                 <PowerStats powerstats={result.powerstats} Name={result.name} />
                 <Biography biography={result.biography} work={result.work} />
                 <Image imageUrl={result.image.url} />
+                <Link to={`/details/${result.id}`}><link/>
                 <div/>
         )
         </div>

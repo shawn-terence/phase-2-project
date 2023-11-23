@@ -10,9 +10,9 @@ const Search = ({ setSearchTerm, superheroData, addToFavorites }) => {
 
   return (
     <div>
-      <form onSubmit={handleSearch}>
-        <input type="text" name="searchTerm" placeholder="Search superhero..." />
-        <button type="submit">Search</button>
+      <form id="form-search" onSubmit={handleSearch}>
+        <input id='Input' type="text" name="searchTerm" placeholder="Search superhero..." />
+        <button id='Submit-btn' type="submit">Search</button>
       </form>
 
     </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Search from './Search';
@@ -8,7 +7,7 @@ import Image from './Image';
 import Navbar from './Navbar'; 
 import HeroDetails from './HeroDetails'; 
 import Favorites from './Favorites';
-
+import './App.css';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -55,19 +54,30 @@ function App() {
               superheroData={superheroData}
               addToFavorites={addToFavorites}
             />
-            {superheroData && superheroData.length > 0 ? (
-              superheroData.map((result) => (
-                <div key={result.id}>
-                  <PowerStats powerstats={result.powerstats} Name={result.name} />
-                  <Biography biography={result.biography} work={result.work} />
-                  <Image imageUrl={result.image.url} />
-                  <Link to={`/details/${result.id}`}>View Details</Link>
-                  <button onClick={() => addToFavorites(result)}>Add to Favorites</button>
-                </div>
-              ))
-            ) : (
-              <p>No results found</p>
-            )}
+            <p>Welcome to SuperHero DataBase,your one stop website for any information on heros and villains a like</p>
+            <div id='Character-container'>
+                {superheroData && superheroData.length > 0 ? (
+                  superheroData.map((result) => (
+                    <div id='Hero-div' key={result.id}>
+                      <div> <Image imageUrl={result.image.url} /></div>
+                      <div class="card__content">
+                        
+                      <div id='data-div'>
+                        <h3>{result.name}</h3>
+                        <PowerStats powerstats={result.powerstats} Name={result.name} />
+                        <Biography biography={result.biography} work={result.work} />
+                        <button className='btn-2'><Link to={`/details/${result.id}`}>View Details</Link></button>
+                        <button className='btn' onClick={() => addToFavorites(result)}>Add to Favorites</button>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  ))
+                ) : (
+                  <p>No results found</p>
+                )}
+            </div>
           </div>
         }
       />

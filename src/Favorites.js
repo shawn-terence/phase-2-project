@@ -10,12 +10,21 @@ const Favorites = ({ favorites }) => {
       <h2>Favorites</h2> 
       {favorites && favorites.length > 0 ? (
         favorites.map((result) => (
-          <div key={result.id}>
+          <div id='Hero-div' key={result.id}>
+          <div> <Image imageUrl={result.image.url} /></div>
+          <div class="card__content">
+            
+          <div id='data-div'>
+            <h3>{result.name}</h3>
             <PowerStats powerstats={result.powerstats} Name={result.name} />
             <Biography biography={result.biography} work={result.work} />
-            <Image imageUrl={result.image.url} />
-            <Link to={`/details/${result.id}`}>View Details</Link>
+            <button className='btn-2'><Link to={`/details/${result.id}`}>View Details</Link></button>
+
+            </div>
           </div>
+
+
+        </div>
         ))
       ) : (
         <p>No favorites yet</p>

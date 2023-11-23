@@ -7,6 +7,7 @@ import Image from './Image';
 import Navbar from './Navbar'; 
 import HeroDetails from './HeroDetails'; 
 import Favorites from './Favorites';
+import blackAdamData from './blackAdamData';
 import './App.css';
 
 function App() {
@@ -43,17 +44,18 @@ function App() {
   return (
 
     <div>
-    <Navbar /> 
+    <Navbar
+    /> 
     <Routes>
       <Route
         path="/"
         element={
           <div>
-            <Search
-              setSearchTerm={setSearchTerm}
-              superheroData={superheroData}
-              addToFavorites={addToFavorites}
-            />
+                  <Search
+                    setSearchTerm={setSearchTerm}
+                    superheroData={superheroData}
+                    addToFavorites={addToFavorites}
+                  />
             <p>Welcome to SuperHero DataBase,your one stop website for any information on heros and villains a like</p>
             <div id='Character-container'>
                 {superheroData && superheroData.length > 0 ? (
@@ -75,7 +77,35 @@ function App() {
                     </div>
                   ))
                 ) : (
-                  <p>No results found</p>
+                  <div>
+                    <h1>Are you new here?</h1>
+                    <p>If so, here are some instructions:</p>
+                    <ol>
+                      <li> click on the search bar and input the hero/villain in question</li>
+                      <li> press search</li>
+                      <li> press view details to see more information about the Character</li>
+                      <li>You should see something like this:</li>
+                    </ol>
+                    <div>
+                    <div id="Hero-div" key={blackAdamData.id}>
+                      <div>
+                        <Image imageUrl={blackAdamData.image.url} /> 
+                      </div>
+                          <div className="card__content">
+                            <div id="data-div">
+                              <h3>{blackAdamData.name}</h3>
+                              <PowerStats powerstats={blackAdamData.powerstats} Name={blackAdamData.name} /> 
+                              <Biography biography={blackAdamData.biography} /> 
+                              <button className="btn-2">
+                                <Link to={`/details/${blackAdamData.id}`}>View Details</Link>
+                              </button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                                      </div>
+                    </div>
+                  
                 )}
             </div>
           </div>

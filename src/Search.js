@@ -9,7 +9,7 @@ const Search = ({ setSearchTerm, superheroData, addToFavorites }) => {
   };
 
   return (
-    <div>
+    <div id='search-div'>
       <form id="form-search" onSubmit={handleSearch}>
         <input id='Input' type="text" name="searchTerm" placeholder="Search superhero..." />
         <button id='Submit-btn' type="submit">Search</button>

@@ -34,7 +34,7 @@ body{
 #Submit-btn{
   height: 35.9px;
 }
-#Character-container {
+.Character-container {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

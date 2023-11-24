@@ -57,7 +57,7 @@ function App() {
                     addToFavorites={addToFavorites}
                   />
             <p>Welcome to SuperHero DataBase,your one stop website for any information on heros and villains a like</p>
-            <div id='Character-container'>
+            <div className='Character-container'>
                 {superheroData && superheroData.length > 0 ? (
                   superheroData.map((result) => (
                     <div id='Hero-div' key={result.id}>
